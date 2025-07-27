@@ -1,488 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>the kolang</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f5f5f5;
-        }
-        
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                        url('https://placehold.co/1920x1080') no-repeat center center;
-            background-size: cover;
-            min-height: 80vh;
-        }
-        
-        .menu-card {
-            transition: all 0.3s ease;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        
-        .menu-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .food-category-btn {
-            transition: all 0.3s ease;
-        }
-        
-        .food-category-btn.active {
-            background-color: #dc2626;
-            color: white;
-        }
-        
-        .discount-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #dc2626;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kolang - Kedai Makan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(to bottom, #141414, #000000);
+      color: #ffffff;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header img {
+      max-width: 300px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px orange;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #ddd;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      background: orange;
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+      box-shadow: 0 0 10px orange;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #000;
+      box-shadow: 0 0 15px #fff;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+
+      header img {
+        max-width: 85%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="https://placehold.co/50x50" alt="Logo Warung Makan Bahagia" class="h-10 w-10 mr-2">
-                <h1 class="text-xl font-bold text-red-600">the kolang</h1>
-            </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-800 hover:text-red-600 font-medium">Home</a>
-                <a href="#menu" class="text-gray-800 hover:text-red-600 font-medium">Menu</a>
-                <a href="#about" class="text-gray-800 hover:text-red-600 font-medium">About</a>
-                <a href="#contact" class="text-gray-800 hover:text-red-600 font-medium">Contact</a>
-            </div>
-            <div class="md:hidden">
-                <button id="menu-toggle" class="text-gray-800 focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4">
-            <a href="#home" class="block py-2 text-gray-800 hover:text-red-600">Home</a>
-            <a href="#menu" class="block py-2 text-gray-800 hover:text-red-600">Menu</a>
-            <a href="#about" class="block py-2 text-gray-800 hover:text-red-600">About</a>
-            <a href="#contact" class="block py-2 text-gray-800 hover:text-red-600">Contact</a>
-        </div>
-    </nav>
+  <header>
+    <img src="https://i.imgur.com/Oj1Mxp9.jpg" alt="Banner Kolang Makan" />
+  </header>
+  <h1>kolang.com</h1>
+  <p>Kedai makan Kolang – Sedap, Murah & Berbaloi!</p>
+  <p><em>Menu penuh akan tersedia tidak lama lagi...</em></p>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section flex items-center justify-center text-center text-white">
-        <div class="px-4 md:px-0">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Selamat Datang di THE KOLANG</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Nikmati cita rasa masakan tradisional dengan bahan berkualitas tinggi</p>
-            <a href="#menu" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block">Lihat Menu</a>
-        </div>
-    </section>
-
-    <!-- Promo Section -->
-    <section class="bg-red-600 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-2xl font-bold mb-4">PROMO SPESIAL HARI INI!</h2>
-            <p class="text-xl">Diskon 20% untuk semua menu nasi padang - Min. pembelian Rp 50.000</p>
-            <p class="text-sm mt-2">Berlaku sampai 31 Desember 2023</p>
-        </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section id="menu" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4">Menu Kami</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Pilihan menu lezat dengan bahan segar setiap hari</p>
-            
-            <div class="flex flex-wrap justify-center mb-8 gap-4">
-                <button class="food-category-btn active px-6 py-2 bg-gray-200 rounded-full">All Menu</button>
-                <button class="food-category-btn px-6 py-2 bg-gray-200 rounded-full">Makanan</button>
-                <button class="food-category-btn px-6 py-2 bg-gray-200 rounded-full">Minuman</button>
-                <button class="food-category-btn px-6 py-2 bg-gray-200 rounded-full">Paket</button>
-                <button class="food-category-btn px-6 py-2 bg-gray-200 rounded-full">Snack</button>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Menu Item 1 -->
-                <div class="menu-card bg-white">
-                    <div class="relative">
-                        <img src="https://placehold.co/600x400" alt="Nasi Padang dengan rendang, sayuran dan sambal" class="w-full h-48 object-cover">
-                        <div class="discount-badge">-20%</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Nasi Padang Komplit</h3>
-                        <p class="text-gray-600 mb-4">Nasi putih dengan rendang, gulai, sayuran dan sambal khas padang</p>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <span class="text-red-600 font-bold text-lg">Rp 25.000</span>
-                                <span class="text-gray-400 text-sm line-through ml-2">Rp 30.000</span>
-                            </div>
-                            <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition duration-300">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Menu Item 2 -->
-                <div class="menu-card bg-white">
-                    <div class="relative">
-                        <img src="https://placehold.co/600x400" alt="Soto Ayam dengan nasi, telur dan kerupuk" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Soto Ayam</h3>
-                        <p class="text-gray-600 mb-4">Soto ayam dengan bumbu rempah-rempah, nasi, telur dan kerupuk</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-red-600 font-bold text-lg">Rp 20.000</span>
-                            <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition duration-300">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Menu Item 3 -->
-                <div class="menu-card bg-white">
-                    <div class="relative">
-                        <img src="https://placehold.co/600x400" alt="Ayam Geprek dengan sambal dan lalapan segar" class="w-full h-48 object-cover">
-                        <div class="discount-badge">-15%</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Ayam Geprek</h3>
-                        <p class="text-gray-600 mb-4">Ayam goreng crispy dengan sambal pedas dan lalapan segar</p>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <span class="text-red-600 font-bold text-lg">Rp 22.000</span>
-                                <span class="text-gray-400 text-sm line-through ml-2">Rp 26.000</span>
-                            </div>
-                            <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition duration-300">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Menu Item 4 -->
-                <div class="menu-card bg-white">
-                    <div class="relative">
-                        <img src="https://placehold.co/600x400" alt="Es Teh Manis dalam gelas besar dengan lemon" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Es Teh Manis</h3>
-                        <p class="text-gray-600 mb-4">Es teh dengan gula aren asli dan tambahan lemon</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-red-600 font-bold text-lg">Rp 8.000</span>
-                            <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition duration-300">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Menu Item 5 -->
-                <div class="menu-card bg-white">
-                    <div class="relative">
-                        <img src="https://placehold.co/600x400" alt="Jus Alpukat dengan susu kental manis" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Jus Alpukat</h3>
-                        <p class="text-gray-600 mb-4">Jus alpukat segar dengan susu kental manis dan es serut</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-red-600 font-bold text-lg">Rp 15.000</span>
-                            <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition duration-300">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Menu Item 6 -->
-                <div class="menu-card bg-white">
-                    <div class="relative">
-                        <img src="https://placehold.co/600x400" alt="Paket Nasi Goreng dengan telur dadar dan ayam" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Paket Nasi Goreng</h3>
-                        <p class="text-gray-600 mb-4">Nasi goreng spesial dengan telur dadar, ayam, dan acar</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-red-600 font-bold text-lg">Rp 30.000</span>
-                            <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition duration-300">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
-                    <img src="https://placehold.co/600x400" alt="Interior warung makan dengan suasana nyaman dan tradisional" class="rounded-lg shadow-lg w-full">
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl font-bold mb-4">Tentang Warung Kami</h2>
-                    <p class="text-gray-600 mb-4">Warung Makan Bahagia didirikan pada tahun 2010 dengan misi menyajikan makanan enak dengan harga terjangkau. Kami menggunakan bahan-bahan segar setiap hari untuk memastikan kualitas terbaik untuk pelanggan kami.</p>
-                    <p class="text-gray-600 mb-6">Dengan dapur modern dan resep tradisional yang diwariskan turun-temurun, kami bangga bisa terus melayani masyarakat dengan hidangan penuh cita rasa.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <div class="flex items-center">
-                            <div class="bg-red-100 p-3 rounded-full mr-3">
-                                <i class="fas fa-utensils text-red-600"></i>
-                            </div>
-                            <span>100+ Menu Makanan</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="bg-red-100 p-3 rounded-full mr-3">
-                                <i class="fas fa-map-marker-alt text-red-600"></i>
-                            </div>
-                            <span>5 Lokasi Cabang</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="bg-red-100 p-3 rounded-full mr-3">
-                                <i class="fas fa-clock text-red-600"></i>
-                            </div>
-                            <span>Buka Setiap Hari</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Apa Kata Pelanggan Kami</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <img src="https://placehold.co/50x50" alt="Foto pelanggan Andi Setyawan" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-bold">Andi Setyawan</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">"Nasi padang di sini enak banget! Rendangnya empuk dan bumbunya meresap. Tempatnya juga nyaman buat makan bersama keluarga."</p>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <img src="https://placehold.co/50x50" alt="Foto pelanggan Rina Wijaya" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-bold">Rina Wijaya</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">"Soto ayamnya selalu jadi pilihan saya saat makan siang. Kuahnya gurih dan ayamnya banyak. Harganya juga sangat terjangkau untuk kualitasnya."</p>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <img src="https://placehold.co/50x50" alt="Foto pelanggan Bambang Pratama" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-bold">Bambang Pratama</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">"Pelayanannya cepat dan ramah. Saya sering pesan ayam geprek disini, pedasnya pas dan ayamnya crispy. Sangat recommended!"</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Hubungi Kami</h2>
-            
-            <div class="flex flex-col md:flex-row gap-12">
-                <div class="md:w-1/2">
-                    <form>
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700 mb-2">Nama Anda</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="message" class="block text-gray-700 mb-2">Pesan Anda</label>
-                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 w-full md:w-auto">Kirim Pesan</button>
-                    </form>
-                </div>
-                
-                <div class="md:w-1/2">
-                    <div class="bg-gray-50 p-6 rounded-lg h-full">
-                        <h3 class="text-xl font-bold mb-4">Informasi Kontak</h3>
-                        
-                        <div class="space-y-4">
-                            <div class="flex items-start">
-                                <div class="bg-red-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-map-marker-alt text-red-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium">Alamat</h4>
-                                    <p class="text-gray-600">Jl. Raya Contoh No. 123, Jakarta Selatan, DKI Jakarta</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-red-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-phone-alt text-red-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium">Telepon</h4>
-                                    <p class="text-gray-600">(021) 1234-5678</p>
-                                    <p class="text-gray-600">0812-3456-7890</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-red-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-envelope text-red-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium">Email</h4>
-                                    <p class="text-gray-600">info@warungbahagia.com</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-red-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-clock text-red-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium">Jam Buka</h4>
-                                    <p class="text-gray-600">Senin - Minggu: 08.00 - 22.00 WIB</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-6">
-                            <h3 class="text-xl font-bold mb-4">Follow Kami</h3>
-                            <div class="flex space-x-4">
-                                <a href="#" class="bg-gray-200 hover:bg-red-600 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="bg-gray-200 hover:bg-red-600 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="bg-gray-200 hover:bg-red-600 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                                <a href="#" class="bg-gray-200 hover:bg-red-600 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
-                                    <i class="fab fa-tiktok"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Maps -->
-    <section class="bg-gray-100">
-        <div class="container mx-auto px-4 py-8">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.79916101533686!3d-6.194663395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTEnMzEuOCJTIDEwNsKwNDgnMDEuNSJF!5e0!3m2!1sen!2sid!4v1625728034411!5m2!1sen!2sid" 
-                width="100%" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy"
-                class="rounded-lg shadow-lg">
-            </iframe>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <div class="flex items-center">
-                        <img src="https://placehold.co/40x40" alt="Logo Warung Makan Bahagia" class="h-8 w-8 mr-2">
-                        <h3 class="text-xl font-bold">Warung Makan Bahagia</h3>
-                    </div>
-                    <p class="text-gray-400 mt-2">Lezat, Higienis, Terjangkau</p>
-                </div>
-                
-                <div class="text-center md:text-right">
-                    <p class="text-gray-400">© 2023 Warung Makan Bahagia. All rights reserved.</p>
-                    <p class="text-gray-400 mt-1">Made with ❤ in Jakarta</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Food category filter
-        const categoryButtons = document.querySelectorAll('.food-category-btn');
-        
-        categoryButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                categoryButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
-                // Here you would normally filter the menu items
-                // This is just for demonstration
-            });
-        });
-    </script>
+  <!-- Butang WhatsApp -->
+  <a href="https://wa.me/60199398407?text=Hi%20saya%20nak%20order%20makanan%20Kolang" target="_blank">
+    <button class="btn">Tempah Sekarang (WhatsApp)</button>
+  </a>
 </body>
 </html>

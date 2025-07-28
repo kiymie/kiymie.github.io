@@ -1,100 +1,135 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kolang - Kedai Makan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Kolang</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      height: 100vh;
-      background: linear-gradient(to bottom, #141414, #000000);
-      color: #ffffff;
-      font-family: 'Orbitron', sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #101f1e;
+      color: white;
+    }
+
+    header {
+      background-color: #0b3c38;
+      padding: 1rem;
       text-align: center;
-      padding: 20px;
     }
 
-    header img {
-      max-width: 300px;
-      border-radius: 15px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 2px;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 15px;
-      text-shadow: 0 0 10px orange;
+    section {
+      padding: 2rem;
     }
 
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 15px;
-      color: #ddd;
+    .features {
+      background-color: #162e2c;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features li::before {
+      content: '✔️ ';
+      margin-right: 8px;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .menu-item {
+      background-color: #1f403f;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .menu-item img {
+      width: 100%;
+      border-radius: 8px;
     }
 
     .btn {
-      padding: 12px 24px;
-      font-size: 1rem;
-      background: orange;
-      color: #000;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      text-transform: uppercase;
-      transition: 0.3s ease;
-      box-shadow: 0 0 10px orange;
-      margin-top: 10px;
+      background-color: #2ca089;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 8px;
+      margin-top: 1rem;
     }
 
-    .btn:hover {
-      background: #fff;
-      color: #000;
-      box-shadow: 0 0 15px #fff;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.2rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-      }
-
-      header img {
-        max-width: 85%;
-      }
+    footer {
+      text-align: center;
+      background-color: #0b3c38;
+      padding: 1rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="<blockquote class="imgur-embed-pub" lang="en" data-id="rpGRJyd"><a href="https://imgur.com/rpGRJyd">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>" />
-  </header>
-  <h1>kolang.com</h1>
-  <p>Kedai makan Kolang – Sedap, Murah & Berbaloi!</p>
-  <p><em>Menu penuh akan tersedia tidak lama lagi...</em></p>
 
-  <!-- Butang WhatsApp -->
-  <a href="https://wa.me/60199398407?text=Hi%20saya%20nak%20order%20makanan%20Kolang" target="_blank">
-    <button class="btn">Tempah Sekarang (WhatsApp)</button>
-  </a>
+  <header>
+    <h1>The Kolang</h1>
+    <p>Makanan premium, harga rakyat.</p>
+  </header>
+
+  <section class="features">
+    <h2>Kelebihan Produk</h2>
+    <ul>
+      <li>Ada sijil HALAL dan bersih</li>
+      <li>Bau tidak hamis</li>
+      <li>Sos percuma black pepper</li>
+      <li>Tahan lama hingga 7 bulan</li>
+      <li>Harga berpatutan (harga warong)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Hot Menu</h2>
+    <div class="menu">
+      <div class="menu-item">
+        <img src="https://i.imgur.com/8VwCB0s.jpg" alt="Menu 1">
+        <h4>Kambing Perap</h4>
+        <p>RM25.00</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://i.imgur.com/zqsp2Iv.jpg" alt="Menu 2">
+        <h4>Ayam Perap</h4>
+        <p>RM15.00</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://i.imgur.com/8VwCB0s.jpg" alt="Menu 3">
+        <h4>Spaghetti Kolang</h4>
+        <p>RM12.00</p>
+      </div>
+    </div>
+
+    <a href="https://wa.me/60199196580" class="btn">Order Sekarang di WhatsApp</a>
+  </section>
+
+  <section>
+    <h2>Akan Datang</h2>
+    <p>Menu penuh & sistem daftar masuk pelanggan sedang dibangunkan.</p>
+    <a href="#" class="btn">Sign In</a>
+  </section>
+
+  <footer>
+    <p>© 2025 The Kolang | WhatsApp: <a href="https://wa.me/60199196580" style="color:#2ca089;">019-919 6580</a></p>
+  </footer>
+
 </body>
 </html>
